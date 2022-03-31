@@ -45,6 +45,30 @@ export const styles = StyleSheet.create({
       position:"absolute", 
       alignItems:"center", 
       marginTop:"50%"
+    },
+    button: {
+      bottom: 80,
+      alignSelf: "center",
+      backgroundColor: "#000000",
+      padding: 10,
+      borderRadius: 30,
+    },
+    productModalContainer: {
+      position: "absolute",
+      bottom: 0,
+      alignSelf: "center",
+      backgroundColor: "#4a4a4a",
+      height: "0%",
+      width: "10%",
+      borderRadius: 30,
+    },
+    productModalButton:
+    {
+      position: "absolute",
+      alignSelf: "center",
+      backgroundColor: "#ffffff",
+      top: "90%",
+      borderRadius: 30,
     }
   });
   
