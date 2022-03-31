@@ -40,6 +40,11 @@ export const styles = StyleSheet.create({
     textContainer: { 
       alignItems: 'center',
       position: 'relative',
-     },
+    },
+    productContainer: {
+      position:"absolute", 
+      alignItems:"center", 
+      marginTop:"50%"
+    }
   });
   

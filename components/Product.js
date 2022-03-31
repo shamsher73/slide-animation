@@ -37,8 +37,15 @@ const Product = ({ index, translateX, productItem }) => {
       [0, 1, 0],
       Extrapolate.CLAMP
     );
+    const opacityProduct = interpolate(
+      translateX.value,
+      inputRange,
+      [-1, 1, -1],
+      Extrapolate.CLAMP
+    );
     return {
       transform: [{ scale }],
+      opacity: opacityProduct,
     };
   });
 
@@ -55,19 +62,23 @@ const Product = ({ index, translateX, productItem }) => {
   });
 
   return (
-    <Animated.View
-      style={[
-        styles.container,
-        { backgroundColor: Colors[index%3] },
-        cardStyle
-      ]}
-    >
-      <Animated.View style={[rStyle]}>
-        <Image source={require('./../assets/headphone.png')} style={styles.image} />
-      </Animated.View>
-      <Animated.View style={[styles.textContainer, rTextStyle]}>
-        <Text style={styles.text}>{productItem.title}</Text>
-        <Text style={styles.subText}>{productItem.description}</Text>
+    <Animated.View >
+      <Animated.View
+        style={[
+          styles.container,
+          { backgroundColor: Colors[index%3] },
+          cardStyle
+        ]}
+      >
+      </Animated.View >
+      <Animated.View style={styles.productContainer}>
+        <Animated.View style={[rStyle]}>
+          <Image source={require('./../assets/headphone.png')} style={styles.image} />
+        </Animated.View>
+        <Animated.View style={[styles.textContainer, rTextStyle]}>
+          <Text style={styles.text}>{productItem.title}</Text>
+          <Text style={styles.subText}>{productItem.description}</Text>
+        </Animated.View>
       </Animated.View>
     </Animated.View>
   );
