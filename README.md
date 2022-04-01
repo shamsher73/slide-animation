@@ -1,5 +1,5 @@
 # react native slide and popup animation
-created by using react-native-reanimated
+created by using react-native-reanimated\
 ![iOS Example](./example-ios.gif)
 
 ## How to run 
